@@ -1,0 +1,19 @@
+# Doculy Verifier (Open Source)
+
+An open-source prototype for **certificate forgery risk detection** using a Vision Transformer (ViT) in a simple Streamlit app.
+
+> ⚠️ Disclaimer: This is a **research / demo tool**, not a production security system. Do not rely on it for real-world decisions.
+
+## Features (v0.1)
+
+- Upload a certificate image (`.png`, `.jpg`, `.jpeg`)
+- Run it through a pre-trained ViT model
+- Show a simple "forgery risk" score (heuristic for now)
+
+## Getting Started
+
+```bash
+git clone https://github.com/<your-username>/doculy-verifier.git
+cd doculy-verifier
+pip install -r requirements.txt
+streamlit run app.py
