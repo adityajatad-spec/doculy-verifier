@@ -24,6 +24,14 @@ if uploaded:
     img = Image.open(uploaded).convert("RGB")
     st.image(img, caption="Uploaded certificate", use_column_width=True)
 
+    col1, col2 = st.columns(2)
+with col1:
+    st.image(img, caption="Original", width=300)
+with col2:
+    st.write("**Risk Score:**")
+    st.progress(risk / 100)
+
+
     processor, model = load_model()
     inputs = processor(images=img, return_tensors="pt")
 
